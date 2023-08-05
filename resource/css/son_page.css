@@ -1,0 +1,265 @@
+article{
+	width: 100%;
+}
+
+#top_picture{
+	width: 100%;
+	height: 300px;
+	overflow: hidden;
+	background: linear-gradient(to right, rgb(5,21,57),rgb(5,21,57),rgb(23,48,78));
+}
+
+.top_picture_container{
+	margin: 0 auto;
+	width: 1020px;
+	height: 300px;
+}
+
+.article_content{
+	width: 100%;
+	min-height: 700px;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	position: relative;
+	top: -80px;
+}
+
+.page_menu_column{
+	width: 240px;
+	height: 100%;
+	/*background: #0000FF;*/
+}
+
+.page_menu{
+	width: 100%;
+	height: 400px;
+	background: url(../img/menu_top.jpg) repeat-x 0 top rgb(65,125,143);
+	border: 1px solid #C2C2C2;
+    border-width: 0 1px 1px 1px;
+    text-align: left;
+}
+
+.page_menu ul{
+	padding-top: 34px;
+	box-sizing: border-box;
+}
+
+.page_menu li{
+	border-bottom: solid 1px rgb(30,60,96);
+}
+
+.page_menu a{
+	display: block;
+    line-height: 45px;
+    height: 45px;
+    padding-left: 30px;
+    text-decoration: none;
+    color: #FFF;
+    background: url(../img/daohang.jpg) no-repeat 200px center;
+    font-size: 18px;
+}
+
+.page_menu a:hover{
+	background: url(../img/daohang.jpg) no-repeat 200px center #01AAED;
+}
+
+.other_menu{
+	width: 100%;
+	height: 200px;
+	margin-top: 50px;
+}
+
+.other_menu_column{
+	width: 80%;
+	height: 50px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	text-align: right;
+	line-height: 50px;
+	padding-right: 30px;
+	box-sizing: border-box;
+}
+
+.c1{
+	background: rgb(56,128,212);
+}
+
+.c1 i::before{
+	content: '\e626';
+	font-family: lay;
+	position: relative;
+	right: 15px;
+}
+
+.c2 i::before{
+	content: '\e770';
+	font-family: lay;
+	position: relative;
+	right: 15px;
+}
+
+.c3 i::before{
+	content: '\e681';
+	font-family: lay;
+	position: relative;
+	right: 15px;
+	top: 2px;
+}
+
+.c2{
+	background: rgb(18,150,214);
+}
+
+.c3{
+	background: rgb(19,187,196);
+}
+
+.other_menu i{
+	font-size: 25px;
+	font-style: normal;
+	color: rgb(255,243,242);
+}
+
+.passage_title{
+	width: 700px;
+	min-height: 700px;
+	background: url(../img/menu_top.jpg) repeat-x 0 top rgb(246,246,246);
+	border: 1px solid #5BC0DE;
+    border-width: 0 1px 1px 1px;
+    text-align: left;
+    position: relative;
+}
+
+.path{
+	width: 100%;
+	height: 15px;
+	padding: 8px 0 0 28px;
+}
+
+.titles{
+	padding: 18px 15px 10px 15px;
+    text-align: left;
+}
+
+.titles li{
+	vertical-align: bottom;
+    height: 35px;
+    padding: 3px 0 2px 5px;
+    text-align: left;
+    overflow: hidden;
+    border-bottom: 1px solid #B2C2E0;
+    line-height: 35px;
+    width: 100%;
+}
+
+.title{
+	float: left;
+    text-align: left;
+    padding: 0 0 0 13px;
+    background: url(../img/title_icon.jpg) no-repeat left 13px;
+    width: 75%;
+    overflow: hidden;
+	white-space: nowrap;
+	text-overflow:ellipsis;
+}
+
+.title a{
+	
+}
+
+.message_date{
+	float: right;
+    color: #666666;
+    padding-right: 2px;
+}
+
+#pages{
+	position: absolute;
+	bottom: 30px;
+	width: 100%;
+	height: 30px;
+	right: -10%;
+}
+
+/*单独页面*/
+.titles>h2{
+	text-align: center;
+	font-size: 35px;
+	font-family: "楷体";
+	font-weight: 600;
+	margin-bottom: 20px;
+}
+
+.titles>article{
+	font-size: 16px;
+	font-family: "宋体";
+}
+
+.titles>.big_img {
+	width: 90%;
+	height: 500px;
+	margin: 0 5%;
+}
+
+.titles>table{
+	width: 90%;
+	margin: 0 5%;
+}
+
+.titles>table th{
+	text-align: center;
+	font-size: 18px;
+	font-family: "微软雅黑";
+	padding: 8px 0;
+}
+
+.titles>table td{
+	text-align: center;
+	font-size: 16px;
+	font-family: "宋体";
+	padding: 5px 5px;
+}
+
+.titles>.admin_introduce{
+	width: 90%;
+	margin: 5% 5%;
+	height: 250px;
+	box-sizing: border-box;
+	display: flex;
+}
+
+.titles>.admin_introduce>img{
+	margin-left: 50px;
+}
+
+.titles>.admin_introduce>p{
+	margin-left: 100px;
+	font-size: 18px;
+	font-family: "微软雅黑";
+}
+
+.titles>article>p {
+	margin-bottom: 5px;
+}
+
+.titles>.member_introduce{
+	width: 90%;
+	margin: 5% 5%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.titles>.member_introduce .member{
+	width: 125px;
+	height: 175px ;
+	margin: 10px 20px 40px 20px;
+	background: #009688;
+	text-align: center;
+}
+
+.titles>.member_introduce p{
+	
+}

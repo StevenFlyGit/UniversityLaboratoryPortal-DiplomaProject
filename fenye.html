@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#fenye{
+				height: 100px;
+				width: 1000px;
+				margin: 0 auto;
+				background: #E7E7E7;
+			}
+			#fenye ul{
+				height: 50%;
+				width: 80%;
+				margin: 0 auto;
+				padding: 0;
+			}
+			#fenye ul li{
+				display: inline-block;
+				height: 50%;
+				width: 20px;
+				background: #2D93CA;
+				padding: 3px 10px;
+				text-align: center;
+				border-radius: 5px;
+			}
+			#fenye ul li[disabled]{
+				width: 60px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="fenye">
+			<ul >
+				<li disabled="">
+					<a href="">上一页</a>
+				</li>
+				<li>
+					<a href="">1</a>
+				</li>
+				<li style="display: none;" hidden>
+					...
+				</li>
+				<li>
+					<a href="">3</a>
+				</li>
+				<li>
+					<a href="">4</a>
+				</li>
+				<li>
+					<a href="">5</a>
+				</li>
+				<li>
+					<a href="">6</a>
+				</li>
+				<li>
+					<a href="">7</a>
+				</li>
+				<li>
+					<a href="">...</a>
+				</li>
+				<li>
+					<a href="">9</a>
+				</li>
+				<li disabled="">
+					<a href="">下一页</a>
+				</li>
+			</ul>
+		</div>
+		<div class="red" style="background: #019AD20; width: 800px; height: 500px;">
+			<script>
+var news = "习大大在慰问电中表示，惊悉8月17日下午贵国巴塞罗那市发生货车冲撞人群恐怖袭击事件，造成大量人员伤亡。我谨代表中国政府和中国人民，并以我个人的名义，向遇难者表示深切的哀悼，向遇难者家属和伤者表示诚挚慰问，祝愿伤者早日康复。中方坚决反对一切形式的恐怖主义，愿同包括西班牙在内的国际社会一道，加强反恐合作，共同维护地区和世界和平稳定。";
+
+　　// 直接定义为待选正则表达式
+　　var blacklist=/(习大大|巴塞罗那|西班牙|反恐)/gi;
+　　var text=news.replace(blacklist,function(sMatch){
+　　　　// 为所匹配的单词添加红色和下划线
+　　　　return sMatch.replace(sMatch,'<span style="text-decoration:underline;color:red">'+sMatch+'</span>');
+　　　　// 为所匹配的单词改为红色星号
+　　　　// return sMatch.replace(/./gi,'<span style="color:red">*</span>');
+　　　　// 为所匹配的单词改为星号
+　　　　// return sMatch.replace(/./gi,'*');
+
+　　});
+document.write(text);
+
+ 
+
+</script>
+		</div>
+		
+	</body>
+</html>

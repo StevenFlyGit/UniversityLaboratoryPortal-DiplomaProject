@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="resource/css/login.css"/>
+	</head>
+	<body>
+		<div id="login">
+			<h1>用户注册</h2>
+			<div class="register_border" style="overflow-x: scroll;">
+				<form action="" method="post" onsubmit="return register_submit()">
+					<div class="login_input">
+						<label for="name">用户名</label>
+						<input type="text" name="" id="name" value="" placeholder="用户名长度不能超过12位"/>
+						<label for="psw">密码</label>
+						<input type="password" name="" id="psw" value="" placeholder="密码长度不能超过18位"/>
+						<label for="npsw">确认密码</label>
+						<input type="password" name="" id="npsw" value="" placeholder="确认密码应与密码保持一致"/>
+						<label for="tel">
+							手机号
+							<span style="padding-left: 40px;color: #BD0A01;">该电话号码已被注册！</span>
+						</label>
+						<input type="text" name="" id="tel" value="" />
+					</div>
+					<div class="button">
+						<button type="reset" >清空</button>
+						<input type="submit" value="注册"/>
+					</div>	
+				</form>
+			</div>
+		</div>
+		<script>
+			function register_submit(){
+			var psw = document.getElementById("psw");
+			var npsw = document.getElementById("npsw");
+			var name = document.getElementById("name");
+			var phone = document.getElementById("tel");
+            var flags = false;  
+            if (name.value.length == 0){  
+            	alert("用户名不能为空！");
+            	return false;
+            }
+            if (name.value.length > 12){  
+            	alert("用户名长度超过12位！");
+            	return false;
+            }
+            if (psw.value.length == 0){
+            	alert("密码不能为空！");
+            	return false;
+            }
+            if (psw.value.length > 18){
+            	alert("密码长度超过18位！");
+            	return false;
+            }
+            if (psw.value != npsw.value){
+            	alert("两次输入密码不一致！");
+            	return false;
+            }
+            if (phone.value.length == 0){
+            	alert("手机号不能为空！");
+            	return false;
+            }
+            if (phone.value.length != 11){
+            	alert("手机号不正确！");
+            	return false;
+            }
+		}	
+		</script>
+	</body>
+</html>

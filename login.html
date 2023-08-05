@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="resource/css/login.css"/>
+	</head>
+	<body>
+		<div id="login">
+			<h1>用户登录</h2>
+			<div class="login_border">
+				<form action="" method="post" onsubmit="return type_submit()">
+					<div class="login_input">
+						<label for="userId">用户ID</label>
+						<input type="text" name="user_id" id="userId" value="" />
+						<label for="psw">密码</label>
+						<input type="password" name="password" id="psw" value="" />
+					</div>
+					<div class="user_type">
+						<p>选择用户身份</p>
+						<div class="type_top">
+							<input type="radio" name="Userc" id="student" value="校内学生" />
+							<label for="student">校内学生</label>
+							<input type="radio" name="Userc" id="teacher" value="校内教师"
+								style="margin-left: 20px;" />
+							<label for="teacher">校内教师</label>
+							<input type="radio" name="Userc" id="visitor" value="网站访客"
+								style="margin-left: 20px;" />
+							<label for="visitor">网站访客</label>
+						</div>
+						<div class="type_bottom">
+							<input type="radio" name="Userc" id="admin" value="网站管理员" />
+							<label for="admin">网站管理员</label>
+							<input type="radio" name="Userc" id="team" value="实验团队成员"
+								style="margin-left: 80px;" />
+							<label for="team">实验团队成员</label>
+						</div>
+					</div>
+						
+					<div class="button">
+						<button type="button" onclick="register()">注册</button>
+						<input type="submit" value="登录"/>
+					</div>	
+				</form>
+			</div>
+		</div>
+		<script>
+		function register(){
+			location.href="register.html";
+		}
+		function type_submit(){
+			var obj = document.getElementsByName("Userc");
+			var psw = document.getElementById("psw");
+			var id = document.getElementById("userId");
+            var flags = false;  
+            for(var i=0; i<obj.length; i ++){
+                if(obj[i].checked==true){
+                    flags = true;
+                }
+            }
+            if (flags == false){  
+            	alert("请选择用户身份");
+            	return false;
+            }
+            if (id.value.length == 0){
+            	alert("用户Id不能为空！");
+            	return false;
+            }
+            if (psw.value.length == 0){
+            	alert("密码不能为空！");
+            	return false;
+            }
+		}
+		</script>
+	</body>
+</html>
